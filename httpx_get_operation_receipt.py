@@ -38,3 +38,4 @@ get_operation_receipt_response = httpx.get(
     f"http://localhost:8003/api/v1/operations/operation-receipt/{operation_id}")
 get_operation_receipt_response_data = get_operation_receipt_response.json()
 print("Чек по операции:", get_operation_receipt_response_data)
+print(make_purchase_response_data)

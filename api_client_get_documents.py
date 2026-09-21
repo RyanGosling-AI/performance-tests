@@ -9,11 +9,11 @@ documents_gateway_client = build_documents_gateway_http_client()
 create_user_response = users_gateway_client.create_user()
 print("Create user response:", create_user_response)
 
-open_credit_card_account_response = accounts_gateway_client.open_credit_card_account(create_user_response["user"]["id"])
+open_credit_card_account_response = accounts_gateway_client.open_credit_card_account(create_user_response.user.id)
 print("Open credit card account response:", open_credit_card_account_response)
 
-tariff_document = documents_gateway_client.get_tariff_document(open_credit_card_account_response["account"]["id"])
+tariff_document = documents_gateway_client.get_tariff_document(open_credit_card_account_response.account.id)
 print("Get tariff document response:", tariff_document)
 
-contract_document = documents_gateway_client.get_contract_document(open_credit_card_account_response["account"]["id"])
+contract_document = documents_gateway_client.get_contract_document(open_credit_card_account_response.account.id)
 print("Get contract document response:", contract_document)
